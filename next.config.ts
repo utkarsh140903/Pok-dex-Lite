@@ -10,12 +10,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Fix workspace root issue
-  experimental: {
-    turbo: {
-      root: process.cwd(),
-    },
-  },
 };
 
 export default nextConfig;

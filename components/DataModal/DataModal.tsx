@@ -52,7 +52,7 @@ export default function DataModal({ specimen, onClose }: DataModalProps) {
         onClick={(e) => e.stopPropagation()}
       >
           <div className="sticky top-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 p-4 flex justify-between items-center z-10">
-            <h2 className="text-2xl md:text-3xl font-bold capitalize bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-2xl md:text-3xl font-bold capitalize bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               {specimen.name}
             </h2>
             <button
@@ -68,8 +68,8 @@ export default function DataModal({ specimen, onClose }: DataModalProps) {
 
           <div className="p-6">
             <div className="flex flex-col md:flex-row gap-6 mb-6">
-              <div className="flex-shrink-0 w-full md:w-64">
-                <div className="aspect-square relative bg-gradient-to-br from-slate-800/60 to-slate-900/80 rounded-xl p-4 border border-slate-700/50">
+              <div className="shrink-0 w-full md:w-64">
+                <div className="aspect-square relative bg-linear-to-br from-slate-800/60 to-slate-900/80 rounded-xl p-4 border border-slate-700/50">
                   {specimen.imageUrl && (
                     <Image
                       src={specimen.imageUrl}
@@ -140,7 +140,7 @@ export default function DataModal({ specimen, onClose }: DataModalProps) {
                     </div>
                     <div className="w-full bg-slate-800/60 rounded-full h-2 border border-slate-700/50">
                       <div
-                        className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full shadow-lg shadow-cyan-500/50 transition-all duration-800 ease-out"
+                        className="bg-linear-to-r from-cyan-500 to-blue-500 h-2 rounded-full shadow-lg shadow-cyan-500/50 transition-all duration-800 ease-out"
                         style={{ width: `${Math.min((value / 255) * 100, 100)}%` }}
                       />
                     </div>
@@ -150,7 +150,6 @@ export default function DataModal({ specimen, onClose }: DataModalProps) {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
